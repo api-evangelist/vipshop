@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://gw.vipapis.com/ (live gateway error) + https://vop.vip.com/apicenter (Error Code Query Tool)
+format: vendor-envelope
+envelope:
+  shape: '{ "returnCode": "<namespaced-code>", "returnMessage": "<human message>" }'
+  code_field: returnCode
+  message_field: returnMessage
+  code_namespace: 'vipapis.*'
+  content_type: application/json
+lookup_tool: https://vop.vip.com/apicenter
+errors:
+  - code: vipapis.miss-parameter
+    message: The service field is empty!
+    cause: A required system parameter (here, the service field) was omitted from the request.
+    remediation: Supply the required service parameter (and other system parameters) on every gateway call.
+    source: live https://gw.vipapis.com/ response, 2026-07-21
+notes: >-
+  VOP returns a namespaced returnCode + returnMessage envelope rather than RFC 9457
+  problem+json. Only the vipapis.miss-parameter code is captured verbatim from the live
+  gateway; the complete code registry is behind the login-gated Error Code Query Tool and
+  is not fabricated here. This is the non-payments error registry (VOP is not a card acquirer,
+  so no decline-codes artifact applies).

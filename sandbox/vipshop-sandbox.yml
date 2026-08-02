@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://vop.vip.com/doccenter/viewdoc/59
+environments:
+  - name: sandbox
+    host: sandbox.vipapis.com
+    url: https://sandbox.vipapis.com
+    description: VOP sandbox environment that mirrors production; follows the same development specifications as production. The API permission package callable in sandbox matches the production permission coverage.
+  - name: production
+    host: gw.vipapis.com
+    url: https://gw.vipapis.com
+    description: Production VOP API gateway. Requests must carry a service field (service-based RPC); a missing service returns returnCode vipapis.miss-parameter.
+credentials:
+  model: app-key-secret
+  provisioning: >-
+    Sandbox APPKEY and SECRET are provided directly by VOP vendor support on request
+    (no self-service issuance). Developers needing additional API permissions in sandbox
+    contact vendor support staff.
+  contact_qq: '3084559687'
+test_data:
+  published: false
+  note: The sandbox documentation does not publish predefined test card numbers, magic identifiers, or sample datasets; sandbox coverage mirrors the production permission set once credentials are granted.
+tools:
+  - name: Online Testing Tools
+    url: https://vop.vip.com/apicenter/test
+  - name: Signature Verification Tool
+    note: Verifies request signatures during integration.
+  - name: Error Code Query Tool
+    note: Looks up returnCode values.
+notes: Never invent test values. VOP grants sandbox credentials manually via vendor support rather than publishing shared test keys.

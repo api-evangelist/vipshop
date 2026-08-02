@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://vop.vip.com/doccenter/viewdoc/65
+docs: https://vop.vip.com/home#/console/personal
+summary:
+  types: [apiKey, signature]
+  api_key_in: [query]
+  oauth2_flows: []
+  note: >-
+    No OpenAPI is published, so this profile is captured from the VOP documentation rather
+    than derived from a spec. VOP uses an app-key + secret credential model with per-request
+    signing (a sign parameter), typical of Chinese e-commerce open platforms.
+schemes:
+  - name: AppKeySecret
+    type: apiKey
+    in: query
+    credential: app_key (public) + secret (private)
+    description: >-
+      Each developer application is issued an APPKEY (app_key) and SECRET after developer
+      authentication. The app_key identifies the caller; the secret is used to compute the
+      per-request signature and is never transmitted.
+  - name: RequestSignature
+    type: signature
+    parameter: sign
+    description: >-
+      Every request carries a computed signature (sign) over the request parameters using the
+      app secret. VOP provides a Signature Verification Tool to validate signatures during
+      integration. Vendor authorization binds an app to the vendor accounts whose data it may access.
+tools:
+  signature_verification: https://vop.vip.com/doccenter/viewdoc/65
+notes: >-
+  Exact signature hash algorithm and full system-parameter list are documented in the VOP
+  Development Specifications (login-gated); not fabricated here. This is a signature-auth
+  (not OAuth) provider, so scopes/ is intentionally omitted.

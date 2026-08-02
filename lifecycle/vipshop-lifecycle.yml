@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://vop.vip.com/home#/announcement
+versioning:
+  scheme: version-parameter
+  note: Requests carry a version parameter; per-service versions are published in the VOP API Center.
+  docs: https://vop.vip.com/apicenter/index
+announcements:
+  url: https://vop.vip.com/home#/announcement
+  note: Platform Announcements is VOP's dated notice channel (breaking-change / new-service notices).
+news:
+  url: https://vop.vip.com/doccenter/viewdoc/53
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support documented publicly; no Deprecation pointer emitted.
+status_page:
+  url: null
+  note: No dedicated status/uptime page found; no StatusPage pointer emitted.
+sla:
+  url: null
+notes: >-
+  VOP versions APIs via a version parameter and communicates changes through Platform
+  Announcements. No public status page, SLA, or formal deprecation policy located.

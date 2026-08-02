@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: probed
+source: live probes of /.well-known/* on VOP hosts, 2026-07-21
+genuine_documents: false
+note: >-
+  No genuine well-known discovery documents are published. The VOP API gateway
+  (gw.vipapis.com) returns HTTP 200 for ANY path but with a catch-all RPC error body
+  ({"returnCode":"vipapis.miss-parameter","returnMessage":"The service field is empty!"}),
+  so the 200 status codes are NOT real well-known files. The vop.vip.com and www.vip.com
+  hosts 302-redirect all /.well-known/* paths. No WellKnown/SecurityTxt scoring pointer emitted.
+hosts:
+  - host: https://gw.vipapis.com
+    documents:
+      - {path: /.well-known/security.txt, status: 200, genuine: false, body: gateway-miss-parameter-error}
+      - {path: /.well-known/openid-configuration, status: 200, genuine: false, body: gateway-miss-parameter-error}
+      - {path: /.well-known/oauth-authorization-server, status: 200, genuine: false, body: gateway-miss-parameter-error}
+      - {path: /.well-known/api-catalog, status: 200, genuine: false, body: gateway-miss-parameter-error}
+      - {path: /.well-known/ai-plugin.json, status: 200, genuine: false, body: gateway-miss-parameter-error}
+  - host: https://vop.vip.com
+    documents:
+      - {path: /.well-known/security.txt, status: 302, genuine: false}
+      - {path: /.well-known/openid-configuration, status: 302, genuine: false}
+      - {path: /.well-known/api-catalog, status: 302, genuine: false}
+      - {path: /.well-known/ai-plugin.json, status: 302, genuine: false}
+  - host: https://www.vip.com
+    documents:
+      - {path: /.well-known/security.txt, status: 302, genuine: false}
+      - {path: /.well-known/openid-configuration, status: 302, genuine: false}

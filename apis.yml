@@ -1,28 +1,114 @@
 aid: vipshop
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vipshop.png
 name: VIPShop
-description: 'VIPShop is a company surfaced as a portfolio company of dcm-ventures, hongshan and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  VIPShop (唯品会, vip.com) is a Chinese e-commerce company specializing in branded flash sales
+  and discount retail, connecting brands with consumers through time-limited special-offer events.
+  For partners it runs VOP (VIPShop Open Platform, vop.vip.com), a developer/open platform that lets
+  vendors, individual developers, and ISVs integrate with VIPShop's e-commerce systems — covering
+  orders, products/commodities, inventory, warehouse and logistics, marketplace, multi-channel and
+  new-retail services. VOP exposes a signed, service-based JSON API through the gw.vipapis.com gateway
+  (with a sandbox.vipapis.com test environment), ships official Java, PHP, and C# SDKs, and authenticates
+  callers with an app-key + secret credential and per-request signature.
 url: https://raw.githubusercontent.com/api-evangelist/vipshop/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - dcm-ventures
 - hongshan
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
-apis: []
+- E-commerce
+- Retail
+- Flash Sales
+- Open Platform
+- China
+- Orders
+- Inventory
+- Logistics
+apis:
+- name: VIPShop Open Platform (VOP)
+  description: >-
+    Signed, service-based JSON API for vendors, developers, and ISVs to integrate with VIPShop's
+    e-commerce systems — orders, commodities/products, inventory, warehouse & logistics, marketplace,
+    multi-channel, new-retail, and JITX services. Requests route through the gw.vipapis.com gateway by a
+    service parameter and are authenticated with an app-key + secret and per-request signature.
+  humanURL: https://vop.vip.com/apicenter/index
+  baseURL: https://gw.vipapis.com
+  tags:
+  - E-commerce
+  - Orders
+  - Inventory
+  - Logistics
+  properties:
+  - type: Documentation
+    url: https://vop.vip.com/doccenter/index
+  - type: APIReference
+    url: https://vop.vip.com/apicenter/index
+  - type: Authentication
+    url: authentication/vipshop-authentication.yml
+  - type: Sandbox
+    url: sandbox/vipshop-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
 common:
 - type: Website
   url: http://www.vip.com/
+- type: DeveloperPortal
+  url: https://vop.vip.com/
+- type: Documentation
+  url: https://vop.vip.com/doccenter/index
+- type: APIReference
+  url: https://vop.vip.com/apicenter/index
+- type: GettingStarted
+  url: https://vop.vip.com/doccenter/viewdoc/42
+- type: Support
+  url: https://vop.vip.com/support/index
+- type: SignUp
+  url: https://vop.vip.com/member/console/index
+- type: Login
+  url: https://vop.vip.com/login/loginSystem
+- type: ChangeLog
+  url: https://vop.vip.com/home#/announcement
+- type: Sandbox
+  url: sandbox/vipshop-sandbox.yml
+- type: Packages
+  url: packages/vipshop-packages.yml
+- type: SDKs
+  url: packages/vipshop-packages.yml
+- type: Authentication
+  url: authentication/vipshop-authentication.yml
+- type: Conventions
+  url: conventions/vipshop-conventions.yml
+- type: ErrorCatalog
+  url: errors/vipshop-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/vipshop-lifecycle.yml
+- type: DomainSecurity
+  url: security/vipshop-domain-security.yml

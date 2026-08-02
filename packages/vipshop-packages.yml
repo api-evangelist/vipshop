@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://vop.vip.com/doccenter/viewdoc/65
+packages:
+  - language: java
+    registry: vendor
+    name: vop-java-sdk
+    url: https://vop.vip.com/sdk/download/java/java-sdk-20260703172958.zip
+    version: '20260703172958'
+    official: true
+    note: First-party VOP (VIPShop Open Platform) Java SDK, distributed as a zip from the VOP SDK & Tools page (not published to Maven Central).
+  - language: php
+    registry: vendor
+    name: vop-php-sdk
+    url: https://vop.vip.com/sdk/download/php/php-sdk-20260703173003.zip
+    version: '20260703173003'
+    official: true
+    note: First-party VOP PHP SDK, distributed as a zip from the VOP SDK & Tools page (not published to Packagist).
+  - language: csharp
+    registry: vendor
+    name: vop-cs-sdk
+    url: https://vop.vip.com/sdk/download/cs/cs-sdk-20260703173024.zip
+    version: '20260703173024'
+    official: true
+    note: First-party VOP C#/.NET SDK, distributed as a zip from the VOP SDK & Tools page (not published to NuGet).
+registries_checked:
+  - {registry: npm, found: false}
+  - {registry: pypi, found: false}
+  - {registry: maven-central, found: false}
+  - {registry: nuget, found: false}
+  - {registry: packagist, found: false}
+notes: VOP ships official Java, PHP, and C# SDKs as versioned zip downloads from its own SDK & Tools page rather than through public language registries. Java and PHP download URLs verified HTTP 200 on 2026-07-21.

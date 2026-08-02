@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://gw.vipapis.com/ (gateway error envelope) + https://vop.vip.com/doccenter/index
+gateway: https://gw.vipapis.com
+sandbox_gateway: https://sandbox.vipapis.com
+style: rpc
+request:
+  transport: https
+  format: json
+  dispatch: >-
+    Service-based RPC. Each request selects an operation via a service field/parameter routed by
+    the gateway; a missing service field is rejected with returnCode vipapis.miss-parameter.
+  system_parameters:
+    params:
+      - app_key
+      - sign
+      - service
+      - version
+      - timestamp
+    note: >-
+      Observed/implied common parameters. app_key + sign + service confirmed from the gateway and
+      auth docs; the full canonical list lives in the login-gated Development Specifications.
+authentication:
+  ref: authentication/vipshop-authentication.yml
+  model: app_key + secret + request signature (sign)
+error_envelope:
+  ref: errors/vipshop-error-codes.yml
+  shape: '{ "returnCode": "<namespaced-code>", "returnMessage": "<human message>" }'
+  example: '{"returnCode":"vipapis.miss-parameter","returnMessage":"The service field is empty!"}'
+  code_namespace: 'vipapis.*'
+versioning:
+  scheme: version-parameter
+  note: Requests carry a version parameter; per-service versions are documented in the API Center.
+idempotency:
+  documented: false
+  note: No idempotency-key contract is documented in the public VOP surface; no Idempotency pointer emitted.
+pagination:
+  documented: unknown
+  note: Per-service; not captured at the cross-cutting level in the public docs.
+rate_limiting:
+  documented: unknown
+notes: >-
+  Cross-cutting semantics captured from the live gateway behavior and the public VOP doc center.
+  Fabrication avoided where the spec is login-gated.
