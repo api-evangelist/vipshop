@@ -36,6 +36,17 @@ modified: '2026-07-21'
 tags:
 - Company
 - Consumer
+- E-Commerce
+- Retail
+- Flash Sales
+- Open Platform
+- China
+- Order
+- Inventory
+- Logistics
+tags_raw:
+- Company
+- Consumer
 - E-commerce
 - Retail
 - Flash Sales
@@ -54,6 +65,11 @@ apis:
   humanURL: https://vop.vip.com/apicenter/index
   baseURL: https://gw.vipapis.com
   tags:
+  - E-Commerce
+  - Order
+  - Inventory
+  - Logistics
+  tags_raw:
   - E-commerce
   - Orders
   - Inventory
