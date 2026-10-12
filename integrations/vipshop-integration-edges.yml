@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/vipshop/integrations
+- https://n8n.io/integrations/vipshop/
+- https://composio.dev/toolkits/vipshop
+- https://monid.ai/tools/vipshop
+checked:
+- https://composio.dev/toolkits/vipshop
+- https://monid.ai/tools/vipshop
+- https://n8n.io/integrations/vipshop/
+- https://zapier.com/apps/vipshop/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
