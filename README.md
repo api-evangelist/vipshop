@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-VIPShop is a company surfaced as a portfolio company of dcm-ventures, hongshan and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+VIPShop (唯品会, vip.com) is a Chinese e-commerce company specializing in branded flash sales and discount retail, connecting brands with consumers through time-limited special-offer events. For partners it runs VOP (VIPShop Open Platform, vop.vip.com), a developer/open platform that lets vendors, individual developers, and ISVs integrate with VIPShop's e-commerce systems — covering orders, products/commodities, inventory, warehouse and logistics, marketplace, multi-channel and new-retail services. VOP exposes a signed, service-based JSON API through the gw.vipapis.com gateway (with a sandbox.vipapis.com test environment), ships official Java, PHP, and C# SDKs, and authenticates callers with an app-key + secret credential and per-request signature.
 
-Backed by: dcm-ventures, hongshan — http://www.vip.com/
+**Areas:** Company · Consumer · E-Commerce · Retail · Flash Sales · Open Platform · China · Order · Inventory · Logistics
+
+## VIPShop on APIs.io
+
+Everything profiled for VIPShop is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/vipshop/](https://apis.io/providers/vipshop/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [VIPShop Open Platform (VOP)](https://apis.io/apis/vipshop/vipshop-open-platform-vop/) — Signed, service-based JSON API for vendors, developers, and ISVs to integrate with VIPShop's e-commerce systems — orders, commodities/products, inventory,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Vipshop Authentication](https://apis.io/security/vipshop/vipshop-authentication/)
+- [Vipshop Domain Security](https://apis.io/security/vipshop/vipshop-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.vip.com/)
+- [Documentation](https://vop.vip.com/doccenter/index)
+- [Getting started](https://vop.vip.com/doccenter/viewdoc/42)
+- [API reference](https://vop.vip.com/apicenter/index)
+- [Sign up](https://vop.vip.com/member/console/index)
+- [Support](https://vop.vip.com/support/index)
+- [Changelog](https://vop.vip.com/home#/announcement)
+
+## API Evangelist rating
+
+**Kin Score 24.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 69.0 |
+| Access clarity | 13.2 |
+
+**Agent readiness 8.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/vipshop/](https://apis.io/providers/vipshop/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for VIPShop: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/vipshop/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
